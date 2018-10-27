@@ -8,7 +8,6 @@ class Entry {
 public: 
 	int data;
 	Entry * next;
-	Entry();
 };
 
 class BloodSugarDay {
@@ -17,11 +16,16 @@ private:
 	int count;
 	Entry * first;
 	Entry * fence;
+	Entry * last;
 
 	
 public:
 	BloodSugarDay(int weekday);
+	BloodSugarDay();
+
 	void addEntry(int entry);
+
+	int sumEntries();
 	int computeMax();
 	int computeMin();
 	int getCount();

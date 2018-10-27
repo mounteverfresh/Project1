@@ -1,20 +1,23 @@
 // Kyle Leadbetter
 // 10-26-18
 
-#include "stdafx.h"
+#include "pch.h"
 #include "BloodSugarDay.h"
 
 class BloodSugarWeek {
 private:
-	BloodSugarDay week[7];
-	BloodSugarWeek * next;
+	BloodSugarDay * week;
 	BloodSugarWeek * prev;
+	int currentDay;
+	int weekNumber;
 
 public:
+	BloodSugarWeek(BloodSugarWeek* previous, int week);
 	BloodSugarWeek(BloodSugarWeek* previous);
-	BloodSugarWeek(BloodSugarWeek* previous, BloodSugarWeek* following);
 	int weekMax();
 	int weekMin();
+	int weekSum();
 	int weekCount();
-	void addDay();
+	void nextDay();
+	void printWeek();
 };
