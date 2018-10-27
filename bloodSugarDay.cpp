@@ -1,5 +1,7 @@
 // Kyle Leadbetter
-// 10-26-18
+// 10/26/18
+// COSC 2030
+// Project 1
 
 #include "pch.h"
 #include "bloodSugarDay.h"
@@ -97,7 +99,7 @@ int BloodSugarDay::getCount()
 
 void BloodSugarDay::printDay()
 {
-	cout << "\n\n\tEntries for day " << dayOfWeek << ":" << endl << "++++++++++++++++++++++++++++++++++\n";
+	cout << "\n\n\tEntries for day " << (dayOfWeek + 1) << ":" << endl << "++++++++++++++++++++++++++++++++++\n";
 	if (count == 0)
 	{
 		cout << "No data found for day.";
@@ -110,7 +112,7 @@ void BloodSugarDay::printDay()
 			cout << "Entry " << i + 1 << ": \t" << fence->data << endl;
 			fence = fence->next;
 		}
-		cout << endl << "Daily Mnimum: " << computeMax() << endl << "Daily Maximum: " << computeMin()
-			<< endl << "Daily Sum: " << sumEntries();
+		cout << endl << "Daily Maximum: " << computeMax() << endl << "Daily Minimum: " << computeMin()
+			<< endl << "Daily Sum: " << sumEntries() << endl;
 	}
 }

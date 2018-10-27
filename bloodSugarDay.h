@@ -1,5 +1,8 @@
 // Kyle Leadbetter
-// 10-26-18
+// 10/26/18
+// COSC 2030
+// Project 1
+
 #pragma once
 #include <string>
 using std::string;
